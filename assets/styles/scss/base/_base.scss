@@ -1,0 +1,11 @@
+@import "_null";
+@import "_variables";
+@import "_typography";
+@import "_mixins";
+@import "_general";
+
+h1 {
+  font-size: 60px;
+  font-weight: 400;
+  color: green;
+}

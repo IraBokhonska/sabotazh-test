@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../fonts/AvenirNext-Regular.eot);
+  src: url(../../fonts/AvenirNext-Regular.eot?#iefix)
+      format("embedded-opentype"),
+    url(../../fonts/AvenirNext-Regular.woff2) format("woff2"),
+    url(../../fonts/AvenirNext-Regular.woff) format("woff"),
+    url(../../fonts/AvenirNext-Regular.ttf) format("truetype"),
+    url(../../fonts/AvenirNext-Regular.svg#AvenirNext-Regular) format("svg"),
+    url(../../fonts/AvenirNext-Regular.otf) format("otf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../fonts/AvenirNext-Medium.eot);
+  src: url(../../fonts/AvenirNext-Medium.eot?#iefix) format("embedded-opentype"),
+    url(../../fonts/AvenirNext-Medium.otf) format("otf"),
+    url(../../fonts/AvenirNext-Medium.svg#AvenirNext-Medium) format("svg"),
+    url(../../fonts/AvenirNext-Medium.ttf) format("truetype"),
+    url(../../fonts/AvenirNext-Medium.woff) format("woff"),
+    url(../../fonts/AvenirNext-Medium.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../fonts/AvenirNext-DemiBold.eot);
+  src: url(../../fonts/AvenirNext-DemiBold.eot?#iefix)
+      format("embedded-opentype"),
+    url(../../fonts/AvenirNext-DemiBold.otf) format("otf"),
+    url(../../fonts/AvenirNext-DemiBold.svg#AvenirNext-DemiBold) format("svg"),
+    url(../../fonts/AvenirNext-DemiBold.ttf) format("truetype"),
+    url(../../fonts/AvenirNext-DemiBold.woff) format("woff"),
+    url(../../fonts/AvenirNext-DemiBold.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@import "./base/base";
+@import "./structure/header";
+@import "./structure/main";
+@import "./structure/footer";

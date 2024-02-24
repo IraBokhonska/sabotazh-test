@@ -1,0 +1,88 @@
+.header {
+  width: 100%;
+
+  .for-customers {
+    background: $primary-black;
+    padding: 11px 80px;
+    min-height: 47px;
+    @include adaptiveValue("padding-left", 80, 20, 1);
+    @include adaptiveValue("padding-right", 80, 20, 1);
+
+    @media (max-width: 375px) {
+      padding: 16px 20px;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
+
+      font-weight: 500;
+      color: $white;
+
+      @media (max-width: 480px) {
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+
+        .delivery {
+          line-height: 20px;
+        }
+      }
+    }
+
+    &__block {
+      min-height: 24px;
+
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+
+      .review {
+        text-align: right;
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        @include adaptiveValue("gap", 2, 0, 1);
+        flex-direction: row-reverse;
+
+        &__item {
+          height: 24px;
+          @include adaptiveValue("height", 24, 16, 1);
+
+          svg {
+            @include adaptiveValue("width", 24, 16, 1);
+            @include adaptiveValue("height", 24, 16, 1);
+          }
+        }
+
+        &__item svg path {
+          fill: #dcdcdc;
+          stroke: #dcdcdc;
+          cursor: pointer;
+          transition: 0.2s;
+        }
+
+        &__item:hover svg path {
+          fill: #989898;
+          stroke: #989898;
+        }
+      }
+
+      .rating[data-total-value="1"] .rating__item:nth-child(n + 5) svg path,
+      .rating[data-total-value="2"] .rating__item:nth-child(n + 4) svg path,
+      .rating[data-total-value="3"] .rating__item:nth-child(n + 3) svg path,
+      .rating[data-total-value="4"] .rating__item:nth-child(n + 2) svg path,
+      .rating[data-total-value="5"] .rating__item:nth-child(n + 1) svg path {
+        fill: #fff4a8;
+        stroke: #fff4a8;
+      }
+    }
+  }
+}
