@@ -1,10 +1,10 @@
 // ---------------------swiper custom-----------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  const swiperImages = document.querySelectorAll(".swiper__image");
-  const mainImg = document.querySelector(".swiper__main-img img");
-  const leftArrow = document.querySelector(".left");
-  const rightArrow = document.querySelector(".right");
+  const swiperImages = document.querySelectorAll(".swiper-product__image");
+  const mainImg = document.querySelector(".swiper-product__main-img img");
+  const leftArrow = document.querySelector(".product-left");
+  const rightArrow = document.querySelector(".product-right");
 
   let currentIndex = 0;
 
@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 300);
   }
 
-  // Function to handle click on left arrow
   leftArrow.addEventListener("click", function () {
     if (currentIndex > 0) {
       currentIndex--;
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateActiveSlide();
   });
 
-  // Function to handle click on right arrow
   rightArrow.addEventListener("click", function () {
     if (currentIndex < swiperImages.length - 1) {
       currentIndex++;
@@ -73,3 +71,5 @@ ratingItemsArray.forEach((item) =>
     console.log(itemValue);
   })
 );
+
+// -------------------partners--------------------

@@ -1,0 +1,212 @@
+.footer {
+  padding-top: 90px;
+  padding-bottom: 51px;
+  border-top: 1px solid $light-grey;
+
+  &__info {
+    margin-bottom: 23px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__block-navigation {
+    max-width: 832px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1.5fr;
+  }
+
+  .navigation {
+    width: 224px;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  .contacts {
+    font-style: normal;
+
+    &-item {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-start;
+
+      font-family: "Avenir Next";
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  h6 {
+    margin-bottom: 16px;
+  }
+}
+.container {
+}
+
+.logo {
+}
+
+.navigation__item {
+}
+
+.navigation__item {
+  width: 224px;
+  height: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.footer__contacts {
+}
+
+.contacts-item {
+  transition: 0.3s;
+  &:hover {
+    color: $blue;
+
+    svg path {
+      transition: 0.3s;
+      stroke: $blue;
+    }
+  }
+}
+.contacts-icon {
+}
+.footer__mail {
+}
+.adress {
+}
+
+.mailing-list {
+  max-width: 268px;
+  margin-left: 22px;
+
+  &__text {
+    text-align: left;
+    line-height: 138%;
+    margin-bottom: 30px;
+  }
+}
+
+.mail {
+  width: 276px;
+  position: relative;
+
+  &__input {
+    display: flex;
+    width: 276px;
+    height: 58px;
+
+    padding: 10px 12px 10px 24px;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 40px;
+    background: #f0f0f0;
+
+    font-family: "Avenir Next";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  &__icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    z-index: 10;
+
+    background-color: rgba(44, 41, 41, 0.24);
+    border-radius: 50%;
+
+    &:hover {
+      transition: 0.3s;
+      background-color: #1f72cd;
+    }
+  }
+}
+
+// ---------------------copy-rights----------
+.footer {
+  &__end {
+    min-height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copyrights {
+    align-self: flex-end;
+    margin-right: 366px;
+  }
+
+  &__payments {
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  &__payment {
+    width: 46px;
+    height: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 6px;
+    border: 1px solid $light-grey;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $light-grey;
+
+      svg rect {
+        fill: $light-grey;
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    height: 24px;
+
+    &__link {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    &__item:hover {
+      transition: 0.3s;
+      svg path {
+        fill: #1f72cd;
+      }
+    }
+  }
+}
