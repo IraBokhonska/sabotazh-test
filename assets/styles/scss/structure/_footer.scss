@@ -1,6 +1,6 @@
 .footer {
-  padding-top: 90px;
-  padding-bottom: 51px;
+  @include adaptiveValue("padding-top", 90, 32, 1);
+  @include adaptiveValue("padding-bottom", 51, 16, 1);
   border-top: 1px solid $light-grey;
 
   &__info {
@@ -9,27 +9,83 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 40px;
+
+    @media (max-width: 1400px) {
+      flex-wrap: wrap;
+      .logo {
+        width: 270px;
+        height: 31px;
+        order: 1;
+      }
+      .mailing-list {
+        order: 2;
+        max-width: 700px;
+        margin-left: 0;
+        display: flex;
+        gap: 24px;
+
+        @media (max-width: 670px) {
+          flex-direction: column;
+          &__text {
+            margin-bottom: 0;
+          }
+          &__title {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .footer__block-navigation {
+        order: 3;
+      }
+    }
   }
 
   &__block-navigation {
     max-width: 832px;
+    @include adaptiveValue("max-width", 832, 600, 1);
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1.5fr;
+
+    @media (max-width: 720px) {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .navigation {
-    width: 224px;
-
+    @include adaptiveValue("max-width", 224, 190, 1);
     &__list {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
+
+    &__item {
+      width: 224px;
+      @include adaptiveValue("width", 224, 190, 1);
+      height: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        color: $blue;
+      }
+    }
   }
 
   .contacts {
     font-style: normal;
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
     &-item {
       display: flex;
@@ -40,52 +96,22 @@
       font-family: "Avenir Next";
       font-size: 16px;
       font-weight: 400;
+
+      transition: 0.3s;
+
+      &:hover {
+        color: $blue;
+        svg path {
+          transition: 0.3s;
+          stroke: $blue;
+        }
+      }
     }
   }
 
   h6 {
     margin-bottom: 16px;
   }
-}
-.container {
-}
-
-.logo {
-}
-
-.navigation__item {
-}
-
-.navigation__item {
-  width: 224px;
-  height: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-
-  &:hover {
-    color: $blue;
-  }
-}
-
-.footer__contacts {
-}
-
-.contacts-item {
-  transition: 0.3s;
-  &:hover {
-    color: $blue;
-
-    svg path {
-      transition: 0.3s;
-      stroke: $blue;
-    }
-  }
-}
-.contacts-icon {
-}
-.footer__mail {
-}
-.adress {
 }
 
 .mailing-list {
@@ -97,50 +123,56 @@
     line-height: 138%;
     margin-bottom: 30px;
   }
-}
 
-.mail {
-  width: 276px;
-  position: relative;
-
-  &__input {
-    display: flex;
+  .mail {
     width: 276px;
-    height: 58px;
+    position: relative;
 
-    padding: 10px 12px 10px 24px;
-    justify-content: space-between;
-    align-items: center;
+    &__input {
+      display: flex;
+      width: 276px;
+      height: 58px;
 
-    border-radius: 40px;
-    background: #f0f0f0;
+      padding: 10px 12px 10px 24px;
+      justify-content: space-between;
+      align-items: center;
 
-    font-family: "Avenir Next";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%;
-  }
+      border-radius: 40px;
+      background: #f0f0f0;
 
-  &__icon {
-    width: 38px;
-    height: 38px;
+      font-family: "Avenir Next";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &__icon {
+      width: 38px;
+      height: 38px;
 
-    position: absolute;
-    top: 10px;
-    right: 12px;
-    z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    background-color: rgba(44, 41, 41, 0.24);
-    border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      z-index: 10;
 
-    &:hover {
-      transition: 0.3s;
-      background-color: #1f72cd;
+      background-color: rgba(44, 41, 41, 0.24);
+      border-radius: 50%;
+
+      &:hover {
+        transition: 0.3s;
+        background-color: #1f72cd;
+      }
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      &__input {
+        width: 100%;
+      }
     }
   }
 }
@@ -152,22 +184,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 40px;
+    }
+    @media (max-width: 375px) {
+      align-items: flex-start;
+    }
   }
 
   &__copyrights {
     align-self: flex-end;
     margin-right: 366px;
+
+    @media (max-width: 1400px) {
+      margin-right: 0;
+    }
+    @media (max-width: 768px) {
+      align-self: center;
+    }
+    @media (max-width: 375px) {
+      align-self: flex-start;
+    }
   }
 
   &__payments {
     display: flex;
     justify-content: flex-start;
-    gap: 12px;
+    @include adaptiveValue("gap", 12, 8, 1);
   }
 
   &__payment {
-    width: 46px;
-    height: 32px;
+    @include adaptiveValue("width", 46, 34, 1);
+    @include adaptiveValue("height", 32, 24, 1);
 
     display: flex;
     justify-content: center;
@@ -193,7 +245,7 @@
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    gap: 20px;
+    @include adaptiveValue("gap", 20, 12, 1);
     height: 24px;
 
     &__link {
@@ -209,4 +261,36 @@
       }
     }
   }
+}
+
+// spollers
+.block__title {
+  width: 100%;
+
+  background-color: transparent;
+  position: relative;
+}
+
+.block._init .block__title {
+  cursor: pointer;
+}
+
+.block._init .block__title::before,
+.block._init .block__title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: red;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform 0.3s ease 0s;
+}
+
+.block._init .block__title::after {
+  transform: rotate(-90deg);
+}
+
+.block._init .block__title._active::after {
+  transform: rotate(0deg);
 }

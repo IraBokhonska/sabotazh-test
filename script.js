@@ -1,3 +1,37 @@
+// ----------------------------menu------------------------
+const openMenu = document.querySelector(".open");
+const closeMenu = document.querySelector(".close");
+const menu = document.querySelector(".menu__body");
+const menuBtn = document.querySelector(".menu-btn");
+
+function toggleMenu() {
+  menu.classList.toggle("active");
+  openMenu.classList.toggle("hidden");
+  closeMenu.classList.toggle("active");
+}
+
+menuBtn.addEventListener("click", toggleMenu);
+
+// --------------swiper-------------
+// import Swiper from "swiper";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mySwiper = new Swiper(".swiper-container", {
+    loop: true,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    speed: 5000,
+    spaceBetween: 90,
+    allowTouchMove: false,
+    disableOnInteraction: false,
+    autoplay: {
+      delay: 1,
+    },
+  });
+});
+
+// на max-width 678 px додай стрілки  за допомогою befor after до swiper-product__main-img img та збережи для них функціонал свайпера
+
 // ---------------------swiper custom-----------------
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -72,4 +106,27 @@ ratingItemsArray.forEach((item) =>
   })
 );
 
-// -------------------partners--------------------
+// -------------------spoller--------------------
+document.addEventListener("DOMContentLoaded", function () {
+  const spoilers = document.querySelectorAll(".spoiler");
+
+  spoilers.forEach((spoiler) => {
+    const spoilerHeader = spoiler.querySelector(".spoiler-header");
+    const spoilerContent = spoiler.querySelector(".spoiler-content");
+
+    spoilerHeader.addEventListener("click", () => {
+      spoiler.classList.toggle("open");
+    });
+
+    spoilerContent.addEventListener("click", (event) => {
+      event.stopPropagation();
+      spoiler.classList.remove("open");
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!spoiler.contains(event.target)) {
+        spoiler.classList.remove("open");
+      }
+    });
+  });
+});

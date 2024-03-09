@@ -60,3 +60,52 @@
     background-color: $primary-black;
   }
 }
+
+.amount-button {
+  width: 101px;
+  height: 44px;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .number {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px; /* 133.333% */
+    text-transform: uppercase;
+  }
+}
+
+.cart-button {
+  width: 281px;
+  height: 44px;
+  padding: 10px 24px;
+  gap: 10px;
+
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.like-button {
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 10px;
+
+  border-radius: 4px;
+  border: 1px solid $primary-black;
+
+  &:hover {
+    transition: 0.3s;
+    border: 1px solid $white;
+
+    svg path {
+      transition: 0.3s;
+      stroke: red;
+      fill: red;
+    }
+  }
+}

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sabotazh test</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/styles/css/styles.css">
 </head>
 
@@ -12,7 +13,7 @@
   <header class="header">
     <div class="header__wrapper">
       <div class="for-customers">
-        <div class="for-customers__wrapper">
+        <div class="container">
           <div class="product-delivery">Gratis bezorging & montage vanaf € 275,- in Nederland & Belgie</div>
           <div class="for-customers__block">
             <div class="rating" data-total-value="">
@@ -57,18 +58,38 @@
             <img src="./assets/images/logo.png" alt="logo">
           </div>
           <div class="menu">
+            <div class="menu-btn">
+              <span class="open">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="black" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50">
+                  <path
+                    d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z">
+                  </path>
+                </svg>
+              </span>
+            </div>
             <nav class="menu__body">
               <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
+                <li class="menu__item spoiler">
+                  <a href="#" class="menu__link spoiler-header">
                     <span>Kantoormeubelen</span>
-                    <span>
+                    <span class="spoiler-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M13 5.5L8 10.5L3 5.5" stroke="#2C2929" stroke-width="1.5" stroke-linecap="round"
                           stroke-linejoin="round" />
                       </svg>
                     </span>
                   </a>
+                  <div class="spoiler-content">
+                    <p class="spoiler-content-item">Item1</p>
+                    <p class="spoiler-content-item">Item2</p>
+                    <p class="spoiler-content-item">Item3</p>
+                  </div>
                 </li>
                 <li class="menu__item">
                   <a href="#" class="menu__link">Thuiswerkplek</a>
@@ -128,16 +149,20 @@
                 </svg>
               </a>
             </li>
-            <li class="icons__item">
-              <a class="icons__link" href="#">
+            <li class="icons__item spoiler">
+              <a class="icons__link spoiler-header" href="#">
                 <span>NL</span>
-                <span>
+                <span class="spoiler-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#2C2929" stroke-width="1.5" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg>
                 </span>
               </a>
+              <div class="spoiler-content">
+                <p class="spoiler-content-item">EN</p>
+                <p class="spoiler-content-item">UA</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -257,7 +282,24 @@
               </div>
             </div>
             <div class="product__policy">
-              <div class="product__price">€300,00 <span>€365,00</span></div>
+              <div class="product__price">
+                <div class="price">€300,00 <span>€365,00</span></div>
+                <button class="tpl-button amount-button">
+                  <span class="minus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
+                      <path d="M9 1H1" stroke="#2C2929" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  <span class="number">1</span>
+                  <span class="plus">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path d="M5 1V9M9 5H1" stroke="#2C2929" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
               <div class="product__amount amount">
                 <button class="tpl-button amount-button">
                   <span class="minus">
@@ -333,11 +375,11 @@
       </div>
     </div>
   </section>
-  <section class="product-characteristics">
+  <section class="characteristics">
     <div class="container">
-      <div class="product-characteristic product-characteristic-description ">
-        <h3 class="product-characteristic__title">Beschrijving</h3>
-        <p class="product-characteristic__text">
+      <div class="characteristics__description ">
+        <h3 class="characteristics__title">Beschrijving</h3>
+        <p class="characteristics__text">
           Met ons zit-sta bureau werkt u ergonomisch en efficiënt! Daarnaast
           verbetert u uw werkhouding en is het ideaal om actiever te werken. De snelle en stille motor maakt het bureau
           zeer gebruiksvriendelijk! Sinds kort is het Fuse zit-sta bureau standaard voorzien van een bedieningspaneel
@@ -345,65 +387,65 @@
           4 memory functies.
         </p>
       </div>
-      <div class="product-characteristic">
-        <h3 class="product-characteristic__title">Eigenschappen</h3>
-        <div class="parameters-container">
-          <ul class="product-characteristic__parameters  characteristic__parameters_1 ">
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Hoogte frame:</h5>
-              <p class="product-characteristic__parameter-description">72-117 cm</p>
+      <div class="characteristics__container">
+        <h3 class="characteristics__title">Eigenschappen</h3>
+        <div class="characteristics__block ">
+          <ul class="characteristics__parameters  characteristics__parameters_1 ">
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Hoogte frame:</h5>
+              <p class="characteristics__parameter-description">72-117 cm</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Breedte:</h5>
-              <p class="product-characteristic__parameter-description">120-180 cm</p>
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Breedte:</h5>
+              <p class="characteristics__parameter-description">120-180 cm</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Diepte:</h5>
-              <p class="product-characteristic__parameter-description">80 cm</p>
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Diepte:</h5>
+              <p class="characteristics__parameter-description">80 cm</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Memory:</h5>
-              <p class="product-characteristic__parameter-description">3 standen</p>
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Memory:</h5>
+              <p class="characteristics__parameter-description">3 standen</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Verstelbaarheid:</h5>
-              <p class="product-characteristic__parameter-description">Elektrisch verstelbaar:</p>
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Verstelbaarheid:</h5>
+              <p class="characteristics__parameter-description">Elektrisch verstelbaar:</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Frame kleuren leverbaar:</h5>
-              <p class="product-characteristic__parameter-description">Aluminium, zwart, witr</p>
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Frame kleuren leverbaar:</h5>
+              <p class="characteristics__parameter-description">Aluminium, zwart, witr</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Kleuren blad leverbaar:</h5>
-              <p class="product-characteristic__parameter-description">Midden eiken, bruin eiken, havanna, wit,
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Kleuren blad leverbaar:</h5>
+              <p class="characteristics__parameter-description">Midden eiken, bruin eiken, havanna, wit,
                 lichtgrijs,
                 robuust eiken</p>
             </li>
           </ul>
-          <ul class="product-characteristic__parameters characteristic__parameters_2">
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Model:</h5>
-              <p class="product-characteristic__parameter-description">Recht</p>
+          <ul class="characteristics__parameters characteristics__parameters_2">
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Model:</h5>
+              <p class="characteristics__parameter-description">Recht</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Type poot:</h5>
-              <p class="product-characteristic__parameter-description">T-poot</p>
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Type poot:</h5>
+              <p class="characteristics__parameter-description">T-poot</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Bladdikte:</h5>
-              <p class="product-characteristic__parameter-description">25 mm</p>
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Bladdikte:</h5>
+              <p class="characteristics__parameter-description">25 mm</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Draagvermogen:</h5>
-              <p class="product-characteristic__parameter-description">100 KG</p>
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Draagvermogen:</h5>
+              <p class="characteristics__parameter-description">100 KG</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Draagvermogen:</h5>
-              <p class="product-characteristic__parameter-description">Snelle stille motor</p>
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Draagvermogen:</h5>
+              <p class="characteristics__parameter-description">Snelle stille motor</p>
             </li>
-            <li class="product-characteristic__parameter">
-              <h5 class="product-characteristic__parameter-title">Bladafwerking:</h5>
-              <p class="product-characteristic__parameter-description">Gelamineerd spaanplaat, afgewerkt met kunststof
+            <li class="characteristics__parameter">
+              <h5 class="characteristics__parameter-title">Bladafwerking:</h5>
+              <p class="characteristics__parameter-description">Gelamineerd spaanplaat, afgewerkt met kunststof
                 stootrand</p>
             </li>
           </ul>
@@ -414,11 +456,13 @@
   <section class="our-products">
     <div class="container">
       <div class="go-shopping">
-        <div class="go-shopping__image">
-          <img src="./assets/images/go-shopping.jpg" alt="go-shopping" />
+        <div class="go-shopping__video">
+          <video poster="./assets/images/go-shopping.jpg" autoplay muted loop preload="metadata">
+            <source type="video/mp4" src="./assets/video/video.mp4">
+          </video>
         </div>
         <div class="go-shopping__introduction  introduction">
-          <div>Introductie</div>
+          <div class="introductie">Introductie</div>
           <h4 class="introduction__title">Maak kennis met onze bureaus en bureaustoelen</h4>
           <button class="tpl-button  introduction-button">Naar de winkel</button>
         </div>
@@ -520,28 +564,28 @@
     </div>
   </section>
   <section class="partners">
-    <div class="partners__wrapper">
-      <div class="partners__title">Onze klanten</div>
-      <ul class="partners__list">
-        <li class="partners__list-item">
+    <div class="partners__wrapper swiper-container">
+      <div class="partners__title swiper-title">Onze klanten</div>
+      <ul class="partners__list swiper-wrapper">
+        <li class="partners__list-item swiper-slide">
           <img src="./assets/images/partners/partner-1.png" alt="partner-img" />
         </li>
-        <li class="partners__list-item">
+        <li class="partners__list-item swiper-slide">
           <img src="./assets/images/partners/partner-2.png" alt="partner-img" />
         </li>
-        <li class="partners__list-item">
+        <li class="partners__list-item swiper-slide">
           <img src="./assets/images/partners/partner-3.png" alt="partner-img" />
         </li>
-        <li class="partners__list-item">
+        <li class="partners__list-item swiper-slide">
           <img src="./assets/images/partners/partner-4.png" alt="partner-img" />
         </li>
-        <li class="partners__list-item">
+        <li class="partners__list-item swiper-slide">
           <img src="./assets/images/partners/partner-5.png" alt="partner-img" />
         </li>
-        <li class="partners__list-item">
+        <li class="partners__list-item swiper-slide">
           <img src="./assets/images/partners/partner-6.png" alt="partner-img" />
         </li>
-        <li class="partners__list-item">
+        <li class="partners__list-item swiper-slide">
           <img src="./assets/images/partners/partner-7.png" alt="partner-img" />
         </li>
       </ul>
@@ -560,13 +604,13 @@
                   <a href="#" class="navigation__link">Kantoormeubelen</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#footer" class="navigation__link">Thuiswerkplek</a>
+                  <a href="#" class="navigation__link">Thuiswerkplek</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#features" class="navigation__link">Kantoorinrichting</a>
+                  <a href="#" class="navigation__link">Kantoorinrichting</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#footer" class="navigation__link">Sale</a>
+                  <a href="#" class="navigation__link">Sale</a>
                 </li>
               </ul>
             </nav>
@@ -579,22 +623,22 @@
                   <a href="#" class="navigation__link">Over ons</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#footer" class="navigation__link">Veel gestelde vragen</a>
+                  <a href="#" class="navigation__link">Veel gestelde vragen</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#footer" class="navigation__link">Contact</a>
+                  <a href="#" class="navigation__link">Contact</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#features" class="navigation__link">Beoordelingen</a>
+                  <a href="#" class="navigation__link">Beoordelingen</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#footer" class="navigation__link">Privacybeleid</a>
+                  <a href="#" class="navigation__link">Privacybeleid</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#footer" class="navigation__link">Algemene voorwaarden</a>
+                  <a href="#" class="navigation__link">Algemene voorwaarden</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#footer" class="navigation__link">Cookie Policy</a>
+                  <a href="#" class="navigation__link">Cookie Policy</a>
                 </li>
               </ul>
             </nav>
@@ -785,6 +829,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./script.js"></script>
 </body>
 
